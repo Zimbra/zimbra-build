@@ -149,16 +149,13 @@ if [ -f /etc/lsb-release ]; then
       echo "7${i}"
       exit 0
     fi
-    if [ "$RELEASE" = "jesse" ]; then
+    if [ "$RELEASE" = "jessie" ]; then
       echo "8${i}"
       exit 0
-    else
-      echo "UNKNOWN${i}"
-      exit 0
     fi
+    echo "UNKNOWN${i}"
+    exit 0
   fi
-  echo "DEBIANUNKNOWN${i}"
-  exit 0
 fi
 
 if [ -f /etc/debian_version ]; then
