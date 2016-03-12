@@ -153,6 +153,10 @@ if [ -f /etc/lsb-release ]; then
       echo "8${i}"
       exit 0
     fi
+    if [ "$RELEASE" = "stretch" ]; then
+      echo "9${i}"
+      exit 0
+    fi
     echo "UNKNOWN${i}"
     exit 0
   fi
