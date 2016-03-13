@@ -160,6 +160,15 @@ if [ -f /etc/lsb-release ]; then
     echo "UNKNOWN${i}"
     exit 0
   fi
+  if [ "$DISTRIBUTOR" = "Univention" ]; then
+    echo -n "UCS"
+    if [ "$RELEASE" = "Vahr" ]; then
+      echo "4${i}"
+      exit 0
+    fi
+    echo "UNKNOWN${i}"
+    exit 0
+  fi
 fi
 
 if [ -f /etc/debian_version ]; then
